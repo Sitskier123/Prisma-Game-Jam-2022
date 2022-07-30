@@ -293,7 +293,10 @@ Transform:
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 237e7ab (Brackeys Bat BS)
 --- !u!1 &853888639
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,6 +502,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+>>>>>>> parent of 237e7ab (Brackeys Bat BS)
+=======
 >>>>>>> parent of 237e7ab (Brackeys Bat BS)
 --- !u!1001 &1094921570
 PrefabInstance:
@@ -1154,6 +1160,7 @@ MonoBehaviour:
   maxHealth: 10
   health: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &6725082195446762138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1211,6 +1218,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf649c187f49406489ddc94c4c50a98, type: 3}
+=======
+>>>>>>> parent of 237e7ab (Brackeys Bat BS)
 =======
 >>>>>>> parent of 237e7ab (Brackeys Bat BS)
 --- !u!1001 &8491347935088941224
