@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2602201444491902944}
   - component: {fileID: 2602201444491902945}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Caden_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
