@@ -123,6 +123,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &77919409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7861173839390711378, guid: f428f9fb83754b24d86a074941c8efe1, type: 3}
+  m_PrefabInstance: {fileID: 4686959859494968790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &77919417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77919409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 900336a633f374827a51195b4abc9c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  health: 0
 --- !u!1 &147894459
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +199,7 @@ GameObject:
   - component: {fileID: 194286265}
   - component: {fileID: 194286268}
   - component: {fileID: 194286269}
+  - component: {fileID: 194286270}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Untagged
@@ -302,6 +322,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &194286270
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194286264}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.375
 --- !u!1001 &272249006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -680,6 +716,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 959814881437714581, guid: db5a5807151d74df08d72bce1b956477, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 77919417}
     - target: {fileID: 959814881640272810, guid: db5a5807151d74df08d72bce1b956477, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -774,6 +814,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8684806476012286560, guid: 97f913342c344473c9dd5592416d22ac, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 77919417}
     - target: {fileID: 8684806476012286561, guid: 97f913342c344473c9dd5592416d22ac, type: 3}
       propertyPath: m_LocalPosition.y
       value: -3.03
