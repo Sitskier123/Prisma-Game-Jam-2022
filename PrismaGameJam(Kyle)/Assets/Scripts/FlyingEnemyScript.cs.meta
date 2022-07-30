@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:PrismaGameJam(Kyle)/Assets/Scripts/FlyingEnemyScript.cs.meta
 guid: 010d57a8b62724373bcf41793cbe96af
+=======
+guid: b06785a56d71d465a8b5114a1fecfdfc
+>>>>>>> parent of 237e7ab (Brackeys Bat BS):PrismaGameJam(Kyle)/Assets/Scripts/WakeBat.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
