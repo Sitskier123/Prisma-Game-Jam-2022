@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
     //Components
     private Rigidbody2D rb2d;
+    Animator animator;
 
     //Check parameters
     [Header("Checks")]
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -94,6 +96,7 @@ public class PlayerController : MonoBehaviour
             Drag(data.amountDrag);
         else
             Drag(data.amountFriction);
+        animator.SetBool("IsMoving", false);
         #endregion
 
         #region RUN
@@ -174,6 +177,7 @@ public class PlayerController : MonoBehaviour
         rb2d.AddForce(movement * Vector2.right); //applies force to rigidbody, multiplied by Vector2.right so it only affect X axis
 
         if (InputHandler.instance.MoveInput.x != 0)
+            animator.SetBool("IsMoving", true);
             CheckDirectionToFace(InputHandler.instance.MoveInput.x > 0);
     }
 
