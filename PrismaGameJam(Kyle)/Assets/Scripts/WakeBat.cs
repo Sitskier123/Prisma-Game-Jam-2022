@@ -1,21 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
-
-public Animator animator;
-public Collider2D trigger;
-
-private bool toggle == false;
 
 public class WakeBat : MonoBehaviour
 {
-    void OnTriggerEnter(Collider2D trigger, bool toggle)
+    public Animator animator;
+    public Collider2D trigger;
+
+    public bool ReachedEndOfPath;
+
+
+    void Start()
+    {
+        //aiPath = GetComponent<AIPath>();
+        ReachedEndOfPath = true;
+    }
+
+    void Update()
+    {
+        OnTriggerEnter2D(trigger);
+    }
+
+    void OnTriggerEnter2D(Collider2D trigger)
     {
         if (trigger.tag == "Player")
         {
-            bool.toggle == true;
+            //GetComponent(aiPath).enabled = false;
+            ReachedEndOfPath = false;
             animator.SetBool("isSleep", false);
         }
+        else
+            ReachedEndOfPath = true;
     }
 }
