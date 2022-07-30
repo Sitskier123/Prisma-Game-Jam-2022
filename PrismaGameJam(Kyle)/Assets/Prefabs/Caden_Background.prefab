@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8926133745581256298}
   - component: {fileID: 8926133745581256301}
   m_Layer: 0
-  m_Name: Test_Background
+  m_Name: Caden_Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
