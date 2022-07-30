@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 194286266}
   - component: {fileID: 194286265}
   - component: {fileID: 194286268}
+  - component: {fileID: 194286269}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Untagged
@@ -281,6 +282,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   playerHealth: {fileID: 0}
+--- !u!95 &194286269
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194286264}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 968dbebe8869944d292bf870ee71e713, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &272249006
 PrefabInstance:
   m_ObjectHideFlags: 0
