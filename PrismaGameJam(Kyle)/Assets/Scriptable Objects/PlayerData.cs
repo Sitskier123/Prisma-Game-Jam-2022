@@ -11,5 +11,7 @@ public class PlayerData : ScriptableObject
     public float fallGravityMult;
     public float quickFallGravityMult;
 
-
+    [Header("Drag")]
+    public float amountDrag;
+    public float amountFriction;
 }
