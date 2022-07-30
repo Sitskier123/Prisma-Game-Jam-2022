@@ -207,6 +207,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &511503152
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +321,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f428f9fb83754b24d86a074941c8efe1, type: 3}
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &864465697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -327,6 +330,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream
     - target: {fileID: 1661493744726401109, guid: 6ad9a0c2825a94636a5cf93f728edcbe, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -335,12 +339,15 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+=======
+>>>>>>> Stashed changes
     - target: {fileID: 1661493744845525709, guid: 6ad9a0c2825a94636a5cf93f728edcbe, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1661493745098789201, guid: 6ad9a0c2825a94636a5cf93f728edcbe, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1661493745166077964, guid: 6ad9a0c2825a94636a5cf93f728edcbe, type: 3}
@@ -371,6 +378,10 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: -0.004567057
       objectReference: {fileID: 0}
+=======
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     - target: {fileID: 2602201444491902950, guid: 6ad9a0c2825a94636a5cf93f728edcbe, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -423,6 +434,7 @@ PrefabInstance:
       propertyPath: Healthbar
       value: 
       objectReference: {fileID: 1258389248}
+<<<<<<< Updated upstream
     - target: {fileID: 5965021313829712971, guid: 6ad9a0c2825a94636a5cf93f728edcbe, type: 3}
       propertyPath: walkSpeed
       value: 0
@@ -443,6 +455,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+=======
+>>>>>>> Stashed changes
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ad9a0c2825a94636a5cf93f728edcbe, type: 3}
 --- !u!1 &1241580023
@@ -554,7 +568,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 4
+=======
+  m_RootOrder: 3
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1258389248 stripped
 MonoBehaviour:
@@ -567,6 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9f5264a71304dcaa842f8d5eb0bec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
 --- !u!1 &1265164820
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,6 +663,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1825909113
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,5 +747,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 3
+=======
+  m_RootOrder: 2
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
