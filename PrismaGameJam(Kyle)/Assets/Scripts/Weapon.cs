@@ -9,20 +9,19 @@ public class Weapon : MonoBehaviour
     public GameObject impactEffect;
     public LineRenderer lineRenderer;
 
-    float rangeAttackRate = 1f;
-    float nextRangeAttackTime = 0f;
-
     // Update is called once per frame
     void Update ()
     {
-        if(Time.time >= nextRangeAttackTime)
+        if (Input.GetButtonDown("Fire1"))
         {
-            if (Input.GetButtonDown("Fire1"))
-            {
-                StartCoroutine(Shoot());
-                nextRangeAttackTime = Time.time + 1f / rangeAttackRate;
-            }
+            StartCoroutine(Shoot());
+            //Shoot();
         }
+        /*else
+        {
+            lineRenderer.enabled = false;
+            //NoShoot();
+        }*/
     }
 
     IEnumerator Shoot ()
@@ -41,6 +40,9 @@ public class Weapon : MonoBehaviour
             {
                 enemy.TakeDamage(damage);
             }
+            /*else{a
+                Debug.Log("Oh Fuck");
+            }*/
 
             Instantiate(impactEffect, hitInfo.point, Quaternion.identity);
 
@@ -61,4 +63,10 @@ public class Weapon : MonoBehaviour
         lineRenderer.enabled = false;
     }
 
+    /*void NoShoot ()
+    {
+        lineRenderer.SetPosition(0, firePoint.position);
+        lineRenderer.SetPosition(1, firePoint.position);
+        lineRenderer.enabled = false;
+    }*/
 }
