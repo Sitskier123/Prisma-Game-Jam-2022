@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private enum State { idle, running, jumping, faling, hurt}
-    private State state = State.idle;
-
-
     [SerializeField] private PlayerData data;
 
     //State parameters
@@ -50,14 +46,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(state != State.hurt)
-        {
-            Movement();
-        }
-        AnimationState();
-        anim.SetInteger("state", (int)state);
-
-
         #region TIMERS
         lastTimeOnGround -= Time.deltaTime;
         lastTimePressedJump -= Time.deltaTime;
@@ -87,13 +75,13 @@ public class PlayerController : MonoBehaviour
         #endregion
 
         #region JUMP CHECKS
-        if(isJumping && rb2d.velocity.y < 0)
+        if (isJumping && rb2d.velocity.y < 0)
         {
             isJumping = false;
         }
 
         //Jump
-        if(CanJump() && lastTimePressedJump > 0)
+        if (CanJump() && lastTimePressedJump > 0)
         {
             isJumping = true;
             Jump();
@@ -189,8 +177,10 @@ public class PlayerController : MonoBehaviour
         rb2d.AddForce(movement * Vector2.right); //applies force to rigidbody, multiplied by Vector2.right so it only affect X axis
 
         if (InputHandler.instance.MoveInput.x != 0)
+        {
             animator.SetBool("IsMoving", true);
             CheckDirectionToFace(InputHandler.instance.MoveInput.x > 0);
+        }
     }
 
     private void Turn()
@@ -202,10 +192,10 @@ public class PlayerController : MonoBehaviour
 
         isFacingRight = !isFacingRight;
 
-          // Replacement here:
+        // Replacement here:
         transform.Rotate(0f, 180f, 0f);
 
-      
+
     }
 
     private void Jump()
