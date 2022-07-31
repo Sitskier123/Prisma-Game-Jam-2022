@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour
         this.enabled = false;
         aiPatrol.enabled = false;
 
-        //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
 
         //GetComponents(typeof(Collider2D)).enabled = false;
         //this.enabled = false;
