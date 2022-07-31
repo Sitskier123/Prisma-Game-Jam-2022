@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+
+    public AIPatrol aiPatrol;
+
+    public Animator animator;
+
     public HealthbarBehavior Healthbar;
     public int maxHealth = 5;
     int currentHealth;
@@ -19,9 +24,9 @@ public class Enemy : MonoBehaviour
     {
         currentHealth -= damage;
 
-        // Play hurt animation --> LATER
+        animator.SetTrigger("Hit");
 
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -31,11 +36,17 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Enemy died!");
 
-        //Die animation
+        animator.SetTrigger("IsDead");
 
-        //Disable the enemy
-        GetComponent<Collider2D>().enabled = false;
+        BoxCollider2D[] myColliders = gameObject.GetComponents<BoxCollider2D>();
+        foreach (BoxCollider2D bc in myColliders) bc.enabled = false;
         this.enabled = false;
+        aiPatrol.enabled = false;
+
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+
+        //GetComponents(typeof(Collider2D)).enabled = false;
+        //this.enabled = false;
     }
 
 }
