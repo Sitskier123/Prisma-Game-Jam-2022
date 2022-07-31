@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class AIPatrol : MonoBehaviour
 {
-    public float Hitpoints;
-    public float MaxHitpoints = 5;
-    public HealthbarBehavior Healthbar;
-
     public float walkSpeed;
     public Rigidbody2D rb;
     public Transform groundCheckPos;
@@ -22,8 +18,6 @@ public class AIPatrol : MonoBehaviour
     void Start()
     {
         mustPatrol = true;
-        Hitpoints = MaxHitpoints;
-        Healthbar.SetHealth(Hitpoints, MaxHitpoints);
     }
 
     // Update is called once per frame
@@ -59,15 +53,5 @@ public class AIPatrol : MonoBehaviour
         transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         walkSpeed *= -1;
         mustPatrol = true;
-    }
-
-    public void TakeHit(float damage)
-    {
-        Hitpoints -= damage;
-
-        if (Hitpoints <= 0)
-        {
-            Destroy(gameObject);
-        }
     }
 }
