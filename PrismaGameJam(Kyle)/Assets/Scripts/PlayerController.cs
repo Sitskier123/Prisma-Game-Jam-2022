@@ -46,11 +46,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-<<<<<<< Updated upstream
-=======
-
-
->>>>>>> Stashed changes
         #region TIMERS
         lastTimeOnGround -= Time.deltaTime;
         lastTimePressedJump -= Time.deltaTime;
