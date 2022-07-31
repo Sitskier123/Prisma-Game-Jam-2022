@@ -183,11 +183,17 @@ public class PlayerController : MonoBehaviour
 
     private void Turn()
     {
-        Vector3 scale = transform.localScale; //stores scale and flips x axis of the entire gameobject
-        scale.x *= -1;
-        transform.localScale = scale;
+        // Replacing so FirePoint flips with sprite:
+        //Vector3 scale = transform.localScale; //stores scale and flips x axis of the entire gameobject
+        //scale.x *= -1;
+        //transform.localScale = scale;
 
         isFacingRight = !isFacingRight;
+
+          // Replacement here:
+        transform.Rotate(0f, 180f, 0f);
+
+      
     }
 
     private void Jump()
