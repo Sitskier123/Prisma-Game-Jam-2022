@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
 
     public Animator animator;
 
-    //public HealthbarBehavior Healthbar;
+    public HealthbarBehavior Healthbar;
     public int maxHealth = 5;
     int currentHealth;
 
@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        //Healthbar.SetHealth(currentHealth, maxHealth);
+        Healthbar.SetHealth(currentHealth, maxHealth);
     }
 
     public void TakeDamage(int damage)

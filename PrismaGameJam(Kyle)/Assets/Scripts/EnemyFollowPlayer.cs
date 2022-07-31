@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EnemyFollowPlayer : MonoBehaviour
 {
-    public Animator animator;
-
     public float speed;
     public float lineOfSite;
     private Transform player;
@@ -23,7 +21,6 @@ public class EnemyFollowPlayer : MonoBehaviour
         if (distanceFromPlayer < lineOfSite)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
-            Wake();
         }
     }
 
@@ -31,10 +28,5 @@ public class EnemyFollowPlayer : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, lineOfSite);
-    }
-
-    void Wake()
-    {
-        animator.SetTrigger("isSleep");
     }
 }
