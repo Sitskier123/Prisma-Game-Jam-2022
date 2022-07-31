@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 1491128625}
   - component: {fileID: 1491128624}
   m_Layer: 8
-  m_Name: Tilemap
+  m_Name: Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -916,6 +916,10 @@ PrefabInstance:
     - target: {fileID: 7861173839390711376, guid: f428f9fb83754b24d86a074941c8efe1, type: 3}
       propertyPath: m_UsedByEffector
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861173839390711377, guid: f428f9fb83754b24d86a074941c8efe1, type: 3}
+      propertyPath: m_Size.y
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7861173839390711377, guid: f428f9fb83754b24d86a074941c8efe1, type: 3}
       propertyPath: m_IsTrigger
