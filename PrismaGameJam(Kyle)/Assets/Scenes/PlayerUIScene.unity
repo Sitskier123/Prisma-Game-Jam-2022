@@ -549,6 +549,10 @@ MonoBehaviour:
   maxHealth: 10
   health: 0
   healthBar: {fileID: 1667167885}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  groundCheckCollider: {fileID: 1729893233}
 --- !u!4 &1374082518 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7861173839390711374, guid: f428f9fb83754b24d86a074941c8efe1, type: 3}
@@ -576,6 +580,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1729893233 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7861173838976267803, guid: f428f9fb83754b24d86a074941c8efe1, type: 3}
+  m_PrefabInstance: {fileID: 1374082509}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1832618107
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,11 +966,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3187067408019405262, guid: f874005f3060545f6a961fadcf6cee88, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -542
+      value: -591
       objectReference: {fileID: 0}
     - target: {fileID: 3187067408019405262, guid: f874005f3060545f6a961fadcf6cee88, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 333
+      value: 383
       objectReference: {fileID: 0}
     - target: {fileID: 3187067408019405263, guid: f874005f3060545f6a961fadcf6cee88, type: 3}
       propertyPath: m_IsActive
