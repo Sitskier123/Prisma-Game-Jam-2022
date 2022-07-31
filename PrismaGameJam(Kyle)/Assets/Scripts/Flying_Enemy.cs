@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Flying_Enemy : MonoBehaviour
 {
-
-    public AIPatrol aiPatrol;
-
+    public EnemyFollowPlayer enemyFollowPlayer;
     public Animator animator;
+
+    Rigidbody2D rb;
 
     //public HealthbarBehavior Healthbar;
     public int maxHealth = 5;
@@ -37,16 +37,13 @@ public class Enemy : MonoBehaviour
         Debug.Log("Enemy died!");
 
         animator.SetTrigger("IsDead");
-
-        BoxCollider2D[] myColliders = gameObject.GetComponents<BoxCollider2D>();
-        foreach (BoxCollider2D bc in myColliders) bc.enabled = false;
+        GetComponent<Collider2D>().enabled = false;
+        //GetComponent<SpriteRenderer>().enabled = false;
         this.enabled = false;
-        aiPatrol.enabled = false;
+        enemyFollowPlayer.enabled = false;
 
-        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
 
-        //GetComponents(typeof(Collider2D)).enabled = false;
-        //this.enabled = false;
+        //bat.mass = 5; // Set the GO's mass to 5 via the Rigidbody.
     }
 
 }
