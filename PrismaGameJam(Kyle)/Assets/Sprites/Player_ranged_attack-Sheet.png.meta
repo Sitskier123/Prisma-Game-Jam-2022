@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8c74c30296099794d8d032570d688952
+guid: 02270d4b6e4b440a092f27519445c8a7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -100,23 +100,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_Fall-Sheet_0
+      name: Player_ranged_attack-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d03dd3f1b87d24ebb9d7f4ded2fe564b
-      internalID: -15522688
+      spriteID: be7bbf75cff984a2caad1f8e13c05db6
+      internalID: -2021784018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Fall-Sheet_1
+      name: Player_ranged_attack-Sheet_1
       rect:
         serializedVersion: 2
         x: 16
@@ -151,8 +139,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4818a9bed79814cf7bd35e3e47b15a06
-      internalID: -347656594
+      spriteID: 399874d6f914149de97a71a290b5d1b8
+      internalID: 2078196695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_ranged_attack-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1decd37a1350242149a5a1eca7aea734
+      internalID: -1648023566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_ranged_attack-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af19bd4415e74a578b797ba301dcbca
+      internalID: -385478248
       vertices: []
       indices: 
       edges: []
@@ -168,8 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_Fall-Sheet_1: -347656594
-      Player_Fall-Sheet_0: -15522688
+      Player_ranged_attack-Sheet_0: -2021784018
+      Player_ranged_attack-Sheet_2: -1648023566
+      Player_ranged_attack-Sheet_1: 2078196695
+      Player_ranged_attack-Sheet_3: -385478248
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
