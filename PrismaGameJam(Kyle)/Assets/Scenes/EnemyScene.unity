@@ -532,10 +532,6 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1378420627}
-    - target: {fileID: 7854857112779056235, guid: c360527a7ff224347bbc8838c5af8d8b, type: 3}
-      propertyPath: maxHealth
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7854857112779056236, guid: c360527a7ff224347bbc8838c5af8d8b, type: 3}
       propertyPath: m_Name
       value: Bat
