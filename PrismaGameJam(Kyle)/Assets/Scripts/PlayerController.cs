@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private enum State { idle, running, jumping, faling, hurt}
+    private State state = State.idle;
+
+
     [SerializeField] private PlayerData data;
 
     //State parameters
@@ -46,6 +50,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if(state != State.hurt)
+        {
+            Movement();
+        }
+        AnimationState();
+        anim.SetInteger("state", (int)state);
+
+
         #region TIMERS
         lastTimeOnGround -= Time.deltaTime;
         lastTimePressedJump -= Time.deltaTime;
