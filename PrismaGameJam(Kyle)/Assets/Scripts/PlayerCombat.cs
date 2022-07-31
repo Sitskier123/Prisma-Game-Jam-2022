@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
+    public Animator animator;
+
     public Transform attackPoint;
     public LayerMask enemyLayers;
 
@@ -32,6 +34,8 @@ public class PlayerCombat : MonoBehaviour
         //Detect enemies in range of attack
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
+        animator.SetTrigger("Attack");
+
         // Damage them
         foreach(Collider2D enemy in hitEnemies)
         {
@@ -46,5 +50,16 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+
+    public void TakeDamage()
+    {
+        animator.SetTrigger("Hurt");
+    }
+
+    void Die()
+    {
+        animator.SetBool("IsDead", true);
     }
 }
