@@ -177,8 +177,10 @@ public class PlayerController : MonoBehaviour
         rb2d.AddForce(movement * Vector2.right); //applies force to rigidbody, multiplied by Vector2.right so it only affect X axis
 
         if (InputHandler.instance.MoveInput.x != 0)
+        {
             animator.SetBool("IsMoving", true);
             CheckDirectionToFace(InputHandler.instance.MoveInput.x > 0);
+        }
     }
 
     private void Turn()

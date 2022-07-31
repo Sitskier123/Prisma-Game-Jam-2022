@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    public Animator animator;
     public Transform firePoint;
     public int damage = 1;
     public GameObject impactEffect;
@@ -32,6 +33,8 @@ public class Weapon : MonoBehaviour
         RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
 
         //lineRenderer.enabled = false;
+
+        animator.SetTrigger("Shoot");
 
         if (hitInfo)
         {
