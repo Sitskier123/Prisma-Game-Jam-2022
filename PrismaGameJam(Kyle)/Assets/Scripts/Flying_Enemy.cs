@@ -38,7 +38,7 @@ public class Flying_Enemy : MonoBehaviour
 
         animator.SetTrigger("IsDead");
         GetComponent<Collider2D>().enabled = false;
-        //GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<SpriteRenderer>().enabled = false;
         this.enabled = false;
         enemyFollowPlayer.enabled = false;
 
