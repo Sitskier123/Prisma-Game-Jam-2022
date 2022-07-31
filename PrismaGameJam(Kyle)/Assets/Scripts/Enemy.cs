@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public HealthbarBehavior Healthbar;
     public int maxHealth = 5;
     int currentHealth;
 
@@ -11,6 +12,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        Healthbar.SetHealth(currentHealth, maxHealth);
     }
 
     public void TakeDamage(int damage)
