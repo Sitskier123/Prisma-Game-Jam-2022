@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool run = false;
+    public bool jump = false;
+    public bool isGrounded = false;
+
+    /////////////////////////////////////////
+    
     [SerializeField] private PlayerData data;
 
     //State parameters
@@ -61,7 +67,16 @@ public class PlayerController : MonoBehaviour
         {
             //Ground Check
             if (Physics2D.OverlapBox(_groundCheckPoint.position, _groundCheckSize, 0, ground))
+            {
+                //Debug.Log("isGrounded");
+                isGrounded = true;
                 lastTimeOnGround = data.coyoteTime; //sets lastGrounded to coyoteTime
+            }
+        }
+        else
+        {
+            //Debug.Log("Not");
+            isGrounded = false;
         }
         #endregion
 
@@ -93,10 +108,14 @@ public class PlayerController : MonoBehaviour
     {
         #region DRAG
         if (lastTimeOnGround <= 0)
+        {
             Drag(data.amountDrag);
+        }
         else
+        {
             Drag(data.amountFriction);
-        animator.SetBool("IsMoving", false);
+            //animator.SetBool("IsMoving", false);
+        }
         #endregion
 
         #region RUN
@@ -133,8 +152,19 @@ public class PlayerController : MonoBehaviour
         rb2d.AddForce(-force, ForceMode2D.Impulse); //applies a force against direction of movement
     }
 
-    private void Run(float lerpAmount)
+    public void Run(float lerpAmount)
     {
+        if (InputHandler.instance.MoveInput.x != 0)
+        {
+            run = true;
+        }
+        else
+        {
+            run = false;
+        }
+
+        /////////////////////////////////////////
+
         float targetSpeed = InputHandler.instance.MoveInput.x * data.runMaxSpeed; //calculate wanted direction and desired velocity
         float speedDifference = targetSpeed - rb2d.velocity.x; //calculate difference between current velocity and desired velocity
 
@@ -178,7 +208,7 @@ public class PlayerController : MonoBehaviour
 
         if (InputHandler.instance.MoveInput.x != 0)
         {
-            animator.SetBool("IsMoving", true);
+            //animator.SetBool("IsMoving", true);
             CheckDirectionToFace(InputHandler.instance.MoveInput.x > 0);
         }
     }
@@ -198,8 +228,18 @@ public class PlayerController : MonoBehaviour
       
     }
 
-    private void Jump()
+    public void Jump()
     {
+        if(!isGrounded)
+        {
+            jump = true;
+        }
+        else
+        {
+            jump = false;
+        }
+        /////////////////////////////////////////
+
         //ensures we can't call jump multiples times from one press
         lastTimePressedJump = 0;
         lastTimeOnGround = 0;

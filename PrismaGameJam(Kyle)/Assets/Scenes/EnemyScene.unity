@@ -292,6 +292,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &839792140 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 237104903857090710, guid: 2c42676ad66564d3b9d0abd1255c889b, type: 3}
+  m_PrefabInstance: {fileID: 7949454034656356270}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1215638955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -354,7 +359,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7949454035492659261, guid: 2c42676ad66564d3b9d0abd1255c889b, type: 3}
   m_PrefabInstance: {fileID: 7949454034656356270}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 839792140}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 900336a633f374827a51195b4abc9c4a, type: 3}
@@ -370,12 +375,25 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2114198514201224308, guid: 2c42676ad66564d3b9d0abd1255c889b, type: 3}
   m_PrefabInstance: {fileID: 7949454034656356270}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 839792140}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 396fdd7f92591e043b62cc5cc33d5979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1378420643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839792140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38fb05f7d87fa45d8ac291e207183767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 839792140}
 --- !u!1001 &1843363618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -532,6 +550,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1378420627}
+    - target: {fileID: 7854857112779056234, guid: c360527a7ff224347bbc8838c5af8d8b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7854857112779056235, guid: c360527a7ff224347bbc8838c5af8d8b, type: 3}
       propertyPath: maxHealth
       value: 1
