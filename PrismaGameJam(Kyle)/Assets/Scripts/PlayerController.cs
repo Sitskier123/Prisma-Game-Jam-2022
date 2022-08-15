@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
 
     //Components
     private Rigidbody2D rb2d;
-    Animator animator;
 
     //Check parameters
     [Header("Checks")]
@@ -37,7 +36,6 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -114,7 +112,6 @@ public class PlayerController : MonoBehaviour
         else
         {
             Drag(data.amountFriction);
-            //animator.SetBool("IsMoving", false);
         }
         #endregion
 
@@ -208,7 +205,6 @@ public class PlayerController : MonoBehaviour
 
         if (InputHandler.instance.MoveInput.x != 0)
         {
-            //animator.SetBool("IsMoving", true);
             CheckDirectionToFace(InputHandler.instance.MoveInput.x > 0);
         }
     }
@@ -230,16 +226,6 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        if(!isGrounded)
-        {
-            jump = true;
-        }
-        else
-        {
-            jump = false;
-        }
-        /////////////////////////////////////////
-
         //ensures we can't call jump multiples times from one press
         lastTimePressedJump = 0;
         lastTimeOnGround = 0;

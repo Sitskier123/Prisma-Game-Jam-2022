@@ -8,6 +8,11 @@ public class PlayerAnimations : MonoBehaviour
     // [SerializeField] makes a game object editable within the editor but keeps the variable private
     [SerializeField] GameObject player; //references the game object PlayerController.cs is attatched to
 
+    PlayerCombat playerCombat;
+    Weapon weapon;
+    PlayerHealth playerHealth;
+    
+
     private Animator animator;
     private string currentState;
 
@@ -15,8 +20,7 @@ public class PlayerAnimations : MonoBehaviour
     const string PLAYER_IDLE = "Player_Idle";
     const string PLAYER_RUN = "Player_Run";
     const string PLAYER_HIT = "Player_Hit";
-    const string PLAYER_JUMPUP = "Player_JumpUp";
-    const string PLAYER_JUMPDOWN = "Player_JumpDown";
+    const string PLAYER_JUMP = "Player_Jump";
     const string PLAYER_MELE = "Player_Mele";
     const string PLAYER_SHOOT = "Player_Shoot";
     const string PLAYER_DEAD = "Player_Dead";
@@ -28,6 +32,9 @@ public class PlayerAnimations : MonoBehaviour
     {
         // If you want to access a function within PlayerController.cs, call playerController.MethodName();
         playerController = player.GetComponent<PlayerController>(); // Assigns playerController to PlayerController.cs
+        playerCombat = player.GetComponent<PlayerCombat>(); // Ditto^
+        weapon = player.GetComponent<Weapon>(); //Ditto
+        playerHealth = player.GetComponent<PlayerHealth>(); //Ditto
     }
 
     // Start is called before the first frame update
@@ -50,11 +57,10 @@ public class PlayerAnimations : MonoBehaviour
     }
 
     // Animations are to be set and played here
-    private void FixedUpdate()
+    private void Update()
     {
-        //Debug.Log("This is working");
         //Checks if Run() is true and if so, plays the PLAYER_RUN animation
-        if (playerController.isGrounded == true)
+        if (playerController.isGrounded) //true
         {
             if (playerController.run)
             {
@@ -64,11 +70,28 @@ public class PlayerAnimations : MonoBehaviour
             {
                 ChangeAnimationState(PLAYER_IDLE);
             }
+            if (playerCombat.mele) //true
+            {
+                //Debug.Log("MELE");
+                ChangeAnimationState(PLAYER_MELE);
+            }
         }
 
-        if (playerController.jump)
+        if (!playerController.isGrounded) //false
         {
-           ChangeAnimationState(PLAYER_JUMPUP);
+           //Debug.Log("JUMP");
+           ChangeAnimationState(PLAYER_JUMP);
+        }
+
+        if (weapon.fired) //true
+        {
+            //Debug.Log("SHOT");
+            ChangeAnimationState(PLAYER_SHOOT);
+        }
+
+        if (playerHealth.isHit) //true
+        {
+            ChangeAnimationState(PLAYER_HIT);
         }
     }
 }

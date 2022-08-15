@@ -6,10 +6,11 @@ public class PlayerHealth : MonoBehaviour
 {
     public PlayerController playerController;
 
-    public Animator animator;
+    //public Animator animator;
 
     public int maxHealth = 10;
     public int health;
+    public bool isHit = false;
 
     public Rigidbody2D rb;
 
@@ -23,8 +24,15 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     public void TakeDamage(int damage)
     {
-        animator.SetTrigger("Hit");
+        //animator.SetTrigger("Hit");
         health -= damage;
+        if (damage > 0)
+        {
+            isHit = true;
+        }
+        else
+            isHit = false;
+
         if(health <= 0)
         {
             animator.SetTrigger("IsDead");
