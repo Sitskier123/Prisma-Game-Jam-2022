@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public Animator animator;
     public Transform firePoint;
     public int damage = 1;
     public GameObject impactEffect;
     public LineRenderer lineRenderer;
+    public bool fired = false;
 
     float rangeAttackRate = 1f;
     float nextRangeAttackTime = 0f;
@@ -16,12 +16,14 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
+        fired = false;
         if(Time.time >= nextRangeAttackTime)
         {
             if (Input.GetButtonDown("Fire1"))
             {
                 StartCoroutine(Shoot());
                 nextRangeAttackTime = Time.time + 1f / rangeAttackRate;
+                fired = true;
             }
         }
     }
@@ -34,7 +36,6 @@ public class Weapon : MonoBehaviour
 
         //lineRenderer.enabled = false;
 
-        animator.SetTrigger("Shoot");
 
         if (hitInfo)
         {
