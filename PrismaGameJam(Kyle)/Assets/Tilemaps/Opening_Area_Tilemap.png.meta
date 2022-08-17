@@ -68,8 +68,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureFormat: 4
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1369,11 +1369,11 @@ TextureImporter:
       Opening_Area_Tilemap_4: -46560812
       Opening_Area_Tilemap_34: -2136359904
       Opening_Area_Tilemap_14: -1370155425
-      Opening_Area_Tilemap_18: -783564696
       Opening_Area_Tilemap_1: -930851992
       Opening_Area_Tilemap_11: -364568725
       Opening_Area_Tilemap_24: 713221271
       Opening_Area_Tilemap_55: 53874002
+      Opening_Area_Tilemap_42: -172075373
       Opening_Area_Tilemap_2: -257784599
       Opening_Area_Tilemap_28: -906212029
       Opening_Area_Tilemap_7: -949398803
@@ -1420,9 +1420,9 @@ TextureImporter:
       Opening_Area_Tilemap_3: 330754610
       Opening_Area_Tilemap_48: 883708659
       Opening_Area_Tilemap_0: 1767775468
-      Opening_Area_Tilemap_15: 689632077
+      Opening_Area_Tilemap_18: -783564696
       Opening_Area_Tilemap_16: 930033957
-      Opening_Area_Tilemap_42: -172075373
+      Opening_Area_Tilemap_15: 689632077
       Opening_Area_Tilemap_45: 216099004
   spritePackingTag: 
   pSDRemoveMatte: 0
