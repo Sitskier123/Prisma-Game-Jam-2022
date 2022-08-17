@@ -22,7 +22,7 @@ public class PlayerAnimations : MonoBehaviour
     const string PLAYER_HIT = "Player_Hit";
     const string PLAYER_JUMP = "Player_Jump";
     const string PLAYER_MELE = "Player_Mele";
-    const string PLAYER_SHOOT = "Player_Shoot";
+    //const string PLAYER_SHOOT = "Player_Shoot";
     const string PLAYER_DEAD = "Player_Dead";
     // Use ChangeAnimationState(ANIMATION_NAME); to change the state of the animation
 
@@ -33,7 +33,7 @@ public class PlayerAnimations : MonoBehaviour
         // If you want to access a function within PlayerController.cs, call playerController.MethodName();
         playerController = player.GetComponent<PlayerController>(); // Assigns playerController to PlayerController.cs
         playerCombat = player.GetComponent<PlayerCombat>(); // Ditto^
-        weapon = player.GetComponent<Weapon>(); //Ditto
+        //weapon = player.GetComponent<Weapon>(); //Ditto
         playerHealth = player.GetComponent<PlayerHealth>(); //Ditto
     }
 
@@ -83,15 +83,18 @@ public class PlayerAnimations : MonoBehaviour
            ChangeAnimationState(PLAYER_JUMP);
         }
 
-        if (weapon.fired) //true
+        if (playerHealth.isHit) //true
+        {
+            //Debug.Log("HIT");
+            ChangeAnimationState(PLAYER_HIT);
+        }
+
+        /*if (weapon.fired) //true
         {
             //Debug.Log("SHOT");
             ChangeAnimationState(PLAYER_SHOOT);
-        }
+        }*/
 
-        if (playerHealth.isHit) //true
-        {
-            ChangeAnimationState(PLAYER_HIT);
-        }
+
     }
 }
