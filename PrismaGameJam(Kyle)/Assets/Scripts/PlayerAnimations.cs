@@ -72,7 +72,7 @@ public class PlayerAnimations : MonoBehaviour
             }
             if (playerCombat.mele) //true
             {
-                //Debug.Log("MELE");
+                Debug.Log("MELE");
                 ChangeAnimationState(PLAYER_MELE);
             }
         }
