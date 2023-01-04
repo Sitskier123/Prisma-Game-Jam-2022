@@ -6,6 +6,13 @@ public class ChaseControll : MonoBehaviour
 {
     public Enemy_Flying[] enemyArray;
 
+    void Start()
+    {
+        for (int i = 0; i < numEenemies; i++) {
+
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))

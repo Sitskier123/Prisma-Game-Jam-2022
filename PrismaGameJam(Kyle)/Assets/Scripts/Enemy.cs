@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Global Variable (Can be accessed anywhere)
+int numEnemies = 0;
+
 public class Enemy : MonoBehaviour
 {
     public int maxHealth = 5;
     int currentHealth;
-
+    
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        numEnemies++;
     }
 
     public void TakeDamage(int damage)
