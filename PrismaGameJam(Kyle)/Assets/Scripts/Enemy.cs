@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Global Variable (Can be accessed anywhere)
-int numEnemies = 0;
+// int numEnemies = 0;
 
 public class Enemy : MonoBehaviour
 {
@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        numEnemies++;
+        // numEnemies++;
     }
 
     public void TakeDamage(int damage)
