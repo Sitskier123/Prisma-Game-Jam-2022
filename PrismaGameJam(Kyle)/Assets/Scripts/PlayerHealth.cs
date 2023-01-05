@@ -20,6 +20,7 @@ public class PlayerHealth : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
+
     // Update is called once per frame
     public void TakeDamage(int damage)
     {
